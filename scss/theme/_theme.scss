@@ -1,0 +1,23 @@
+
+/*****************************
+--------------------------
+Block-level-style 
+(Header-footer)
+--------------------------
+*****************************/
+ @import "blocks/theme.header";
+ 
+ @import "blocks/theme.footer";
+
+/*****************************
+--------------------------
+Inner-page-style
+--------------------------
+*****************************/
+
+
+ @import "sections/theme.hero-text";
+
+ @import "sections/theme.video-bg";
+
+

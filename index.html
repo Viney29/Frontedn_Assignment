@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Estelle</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <!-- Website-header -->
+        <header class="header">
+            <div class="wrapper">
+                <a class="mobile-menu"><span></span></a>
+                <div class="header-logo">
+                    <h1><a href="#"><img src="images/logov3.png" alt="logo"></a></h1>
+                </div>
+                <nav class="header-nav">
+                    <a href="#" class="header-nav_link"><span>how it works</span></a>
+                    <a href="#" class="header-nav_link"><span>about</span></a>
+                    <a href="#" class="header-nav_link"><span>team</span></a>
+                    <a href="#" class="header-nav_link"><span>contact</span></a>
+                    <a href="#" class="header-nav_link"><span>get early access</a></span></a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Website-Page-Content -->
+        <main class="main-content" role="main">
+            <section class="video">
+                <div class="video-bg">
+                    <div class="loader"><img src="images/loader.gif" alt="loader"></div>
+                </div>
+
+                <!--Background-Video -->
+                <video id="video" class="video-content" loop="loop" autoplay="true" muted>
+                      <source src="media/video.mp4" type="video/mp4" />
+                      <source src="media/video.ogv" type="video/ogg" />
+                      <source src="media/video.webm" type="video/webm" />
+                </video>
+            </section>
+
+            <section class="hero">
+                <div class="hero-block">
+                     <div class="hero-text">
+                        <div class="hero-text_top">
+                            <h2 class="sub-heading">simplify your wealth management with</h2>
+                            <h1 class="heading"><span id="move">single application|verified avenues| trusted advisors |informed decisions.</span></h1>
+                        </div>
+                        <div class="hero-text_bottom">
+                            <p>how does managing and  enjoying your wealth wisely sound to you?</p>
+                            <p>sign up and get an exclusive perview of the future of wealth managment</p>
+                            <form class="form" method="post" action="">
+                              <input id="submit_on_enter" class="form-input" type="email" name="email" placeholder="Enter your email address">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Website-footerr -->
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer-right">
+                    <p>
+                        <a href="#" class="footer-link fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="footer-link tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="footer-link fb"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" class="footer-link sd">
+                            <svg class="equilizer" viewBox="0 0 128 128">
+                               <g>
+                                    <title>Audio Equilizer</title>
+                                    <rect class="bar" transform="translate(0,0)" y="15"></rect>
+                                    <rect class="bar" transform="translate(25,0)" y="15"></rect>
+                                    <rect class="bar" transform="translate(50,0)" y="15"></rect>
+                                    <rect class="bar" transform="translate(75,0)" y="15"></rect>
+                                    <rect class="bar" transform="translate(100,0)" y="15"></rect>
+                               </g>
+                          </svg>
+                      </a>
+                    </p>
+                </div>
+                <div class="footer-left">
+                    <p>&copy; 2017 estlle wealth. all rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Javascript-files -->
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/cycleText.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                var delay = 2000;
+                setTimeout(function() {
+                    $('#move').cycleText({
+                        animation: 'fadeInLeft',
+                        interval: 3500
+                    });
+                }, delay);
+
+                $('.mobile-menu').click(function(e) {
+                    e.preventDefault();
+                    $(this).toggleClass('active');
+                    console.log('clicked');
+                    $('.header-nav').toggleClass('is_open');
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+@mixin bp($break) {
+
+    @if $break == mobile{
+        @media (max-width: $mobile) { @content; }
+    }
+
+    @else if $break == mobile-max {
+        @media (max-width: $ipad - 1) { @content; }
+    }
+
+    @else if $break == ipad {
+        @media (min-width: ipad) { @content; }
+    }
+
+    @else if $break == tab {
+        @media (min-width: $tab) { @content; }
+    }
+
+    @else if $break == tab-max {
+        @media (max-width: $tab - 1) { @content; }
+    }
+
+    @else if $break == desktop-down {
+        @media (max-width: $desktop - 1) { @content; }
+    }
+
+    @else if $break == desktop {
+        @media (min-width: $desktop) { @content; }
+    }
+
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}

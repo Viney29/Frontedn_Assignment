@@ -1,0 +1,102 @@
+/*****************************
+--------------------------
+Video-bg-style
+--------------------------
+*****************************/
+
+
+.video {
+	position:relative;
+	height:100%;
+	z-index:-1;
+
+	@include bp(mobile-max){
+		background:rgba(0,0,0,.3);
+	}
+
+	&:after {
+		background:url('../images/dot.png') repeat;
+		background-size:initial;
+		background-position:-5px 0px;
+		position:absolute;
+		content: "";
+		height:25%;
+		bottom:0px;
+		width: 45%;
+		right: 0;
+
+		@include bp(tab-max){
+			width:60%;
+		}
+	}
+
+	&-bg {
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		z-index:1;
+		background:radial-gradient(ellipse at left bottom, #398fa9 0%, #132a47 64%, #020c33 121%);
+		-webkit-animation: slideIn  .3s  linear;
+		        animation: slideIn  .3s  linear;
+		-webkit-animation-delay: 3s;
+		        animation-delay: 3s;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+
+		@include bp(tab-max){
+			-webkit-animation-fill-mode:backwards;
+			        animation-fill-mode:backwards;
+			width:40%;
+		}
+
+		@include bp(mobile-max){
+			-webkit-animation:none;
+			        animation:none;
+			width:100%;
+		}
+
+
+		.loader {
+			position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 50%;
+		    -webkit-transform: translateY(-50%);
+		            transform: translateY(-50%);
+		    width: 100%;
+			text-align: center;
+			vertical-align: middle;
+			-webkit-animation: fadeOut 1s ease;
+			        animation: fadeOut 1s ease;
+			-webkit-animation-delay: 2s;
+			        animation-delay: 2s;
+			-webkit-animation-fill-mode: forwards;
+			        animation-fill-mode: forwards;
+
+			img {
+				max-width: 300px;
+			}
+		}
+	}
+
+	&-content{
+		position: fixed;
+	    top: 50%;
+	    left: 55%;
+	    min-width: 110%;
+	    min-height: 100%;
+	    width: auto;
+	    height: auto;
+	    z-index: -100;
+	    -webkit-transform: translateX(-50%) translateY(-50%);
+	            transform: translateX(-50%) translateY(-50%);
+
+	    @include bp(mobile-max){
+	    	display: none;
+	    }
+	}
+}
+
+

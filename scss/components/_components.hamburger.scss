@@ -1,0 +1,73 @@
+.mobile-menu {
+	display: block;
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    cursor: pointer;
+
+	@include bp(desktop){
+		display: none;
+	}
+
+	@include bp(tab-max){
+		margin-top: 15px;
+	}
+
+	span {
+		width: 100%;
+		height: 2px;
+		background:$color-link-hover;
+		position:absolute;
+		top: 10px;
+		-webkit-transition: all .2s linear;
+		transition: all .2s linear;
+
+		&:before{
+			content: "";
+			width: 100%;
+			height: 2px;
+			position:absolute;
+			top: -10px;
+			left: 0px;
+			background:$color-link-hover;
+			-webkit-transition: all .2s linear;
+			transition: all .2s linear;
+		}
+
+		&:after {
+			content: "";
+			width: 100%;
+			height: 2px;
+			position:absolute;
+			top:10px;
+			left: 0;
+			background:$color-link-hover;
+			-webkit-transition: all .2s linear;
+			transition: all .2s linear;
+		}
+	}
+
+	&.active {
+
+		span {
+			background:transparent;
+
+			&:before {
+				top:0;
+				-webkit-transform: rotate(45deg);
+				        transform: rotate(45deg);
+				-webkit-transition: all .2s linear;
+				transition: all .2s linear;
+			}
+			&:after {
+				top:0;
+				-webkit-transform:rotate(-45deg);
+				        transform:rotate(-45deg);
+				-webkit-transition: all .2s linear;
+				transition: all .2s linear;
+			}
+		}
+	}
+}

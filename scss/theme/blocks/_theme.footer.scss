@@ -1,0 +1,69 @@
+/*****************************
+--------------------------
+Footer-style
+--------------------------
+*****************************/
+
+.footer {
+    position: fixed;
+    bottom: -100%;
+    width: 100%;
+    -webkit-animation: slideLoadingUp 1s ease;
+            animation: slideLoadingUp 1s ease;
+    -webkit-animation-delay:2.3s;
+            animation-delay:2.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+    p {
+        color:$color-white;
+        text-transform: capitalize;
+        margin: 0px;
+        line-height: 57px;
+
+        @include bp(mobile-max){ 
+            line-height: normal;
+        }
+    }
+
+    &-left {
+        float:left;
+        width:50%;
+
+        @include bp(mobile-max){
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+    }
+
+    &-right {
+        float: right;
+        width: 50%;
+        text-align: right;
+
+        @include bp(mobile-max){
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 28px;
+            line-height: 45px;
+            vertical-align: middle;
+            color:$color-white;
+            cursor: pointer;
+            
+            &:hover {
+                color:$site-color;
+            }
+
+            svg:hover .bar {
+                fill:$color-link-hover;
+            }
+        }
+    }
+}

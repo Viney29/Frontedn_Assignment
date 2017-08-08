@@ -1,0 +1,262 @@
+/*****************************
+--------------------------
+Error-page-style 404-Error
+--------------------------
+*****************************/
+
+
+.hero {
+	position:absolute;
+	top:50%;
+	left:8%;
+	width:62%;
+	-webkit-transform:translateY(-50%);
+	        transform:translateY(-50%);
+	color:$color-white;
+
+	@include bp(mobile-max){
+		width: 90%;
+	    left: 0;
+	    right: 0;
+	    margin: auto;
+	}
+
+
+	&:before {
+	    content: "";
+	    position: absolute;
+	    left: 0;
+	    top: 0px;
+	    width: 0%;
+	    height: 2px;
+	    background: $color-link-hover;
+	    -webkit-animation:lineW .2s ease;
+	            animation:lineW .2s ease;
+	    -webkit-animation-delay: 3.2s;
+	            animation-delay: 3.2s;
+	    -webkit-animation-fill-mode:forwards;
+	            animation-fill-mode:forwards;
+    }
+
+    &:after {
+	    content: "";
+	    position: absolute;
+	    bottom: 0px;
+	    right: 0px;
+	    width: 0%;
+	    background: $color-link-hover;
+	    height: 2px;
+	    -webkit-animation:lineW .2s ease;
+	            animation:lineW .2s ease;
+	    -webkit-animation-delay: 3.4s;
+	            animation-delay: 3.4s;
+	    -webkit-animation-fill-mode:forwards;
+	            animation-fill-mode:forwards;
+    }
+
+	&-block {
+		padding:90px 0px 90px;
+		position:relative;
+
+		@include bp(tab-max){
+			padding:90px 0px 90px;
+		}
+
+	    &:before {
+		    content: "";
+		    position: absolute;
+		    left: 0;
+		    top: 0px;
+		    width: 2px;
+		    height: 0;
+		    background: $color-link-hover;
+		    -webkit-animation:lineV .2s ease;
+		            animation:lineV .2s ease;
+		    -webkit-animation-delay: 3s;
+		            animation-delay: 3s;
+		    -webkit-animation-fill-mode:forwards;
+		            animation-fill-mode:forwards;
+	    }
+
+	    &:after {
+		    content: "";
+		    position: absolute;
+		    bottom: 0;
+		    left: 0px;
+		    width: 2px;
+		    background: $color-link-hover;
+		    height: 0px;
+		    -webkit-animation:lineV .2s ease;
+		            animation:lineV .2s ease;
+		    -webkit-animation-delay: 3.5s;
+		            animation-delay: 3.5s;
+		    -webkit-animation-fill-mode:forwards;
+		            animation-fill-mode:forwards;
+	    }
+	}
+
+	&-text {
+		max-width: 700px;
+		margin-left: -3%;
+		opacity: 0;
+		-webkit-animation:fadeIn 3s linear;
+		        animation:fadeIn 3s linear;
+		-webkit-animation-delay:3s;
+		        animation-delay:3s;
+		-webkit-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+
+		&:after {
+			content: "";
+			position:absolute;
+			top:0px;
+			right:0px;
+			width:2px;
+			height:0%;
+			background:$color-link-hover;
+			-webkit-animation:lastV .1s ease;
+			        animation:lastV .1s ease;
+		    -webkit-animation-delay: 3.2s;
+		            animation-delay: 3.2s;
+		    -webkit-animation-fill-mode:forwards;
+		            animation-fill-mode:forwards;
+		}
+
+		&_bottom {
+			position:relative;
+			overflow: hidden;
+
+			@include bp(tab-max){
+				padding-right:10px;
+			}
+
+			&:before {
+				content: "";
+				height: 100%;
+				width:100%;
+				position:absolute;
+				background:$color-link-hover;
+				left: 0;
+				top: 0;
+				-webkit-transform: translateX(-100%);
+				        transform: translateX(-100%);
+				-webkit-animation: colorBar .6s ease;
+				        animation: colorBar .6s ease;
+				-webkit-animation-delay:3.65s;
+				        animation-delay:3.65s;
+				-webkit-animation-fill-mode:forwards;
+				        animation-fill-mode:forwards;
+				z-index: 99;
+			}
+		}
+
+		.heading  {
+			color:$color-white;
+			font-family:$secondary-font;
+		    text-transform: capitalize;
+		    font-size: 80px;
+		    line-height: 80px;
+		    margin-bottom: 10px;
+		    opacity: 0;
+		    position:relative;
+			overflow: hidden;
+		    -webkit-animation:fadeInUp .3s linear;
+		            animation:fadeInUp .3s linear;
+		    -webkit-animation-delay:3.6s;
+		            animation-delay:3.6s;
+		    -webkit-animation-fill-mode:forwards;
+		            animation-fill-mode:forwards;
+
+		    @include bp(tab-max){
+				font-size: 50px;
+				line-height: 50px;
+			}
+
+		    @include bp(mobile-max){
+				font-size: 32px;
+				line-height: 32px;
+			}
+
+		    &:before {
+				content: "";
+				height: 100%;
+				width:100%;
+				position:absolute;
+				background:$color-link-hover;
+				left: 0;
+				top: 0;
+				-webkit-transform: translateX(-100%);
+				        transform: translateX(-100%);
+				-webkit-animation: movebar 3s ease;
+				        animation: movebar 3s ease;
+				-webkit-animation-delay:5.5s;
+				        animation-delay:5.5s;
+				-webkit-animation-fill-mode:forwards;
+				        animation-fill-mode:forwards;
+				-webkit-animation-iteration-count: infinite;
+				        animation-iteration-count: infinite;
+				z-index: 99;
+			}
+		}
+
+		.sub-heading {
+			color:$color-white;
+		    text-transform: capitalize;
+		    font-size: 30px;
+		    line-height: 30px;
+		    opacity: 0;
+		    -webkit-animation:fadeInUp .3s ease;
+		            animation:fadeInUp .3s ease;
+		    -webkit-animation-delay:3.6s;
+		            animation-delay:3.6s;
+		    -webkit-animation-fill-mode:forwards;
+		            animation-fill-mode:forwards;
+
+		    @include bp(tab-max){
+				font-size: 22px;
+				line-height: 22px;
+			}
+
+		    @include bp(mobile-max){
+			    font-size: 18px;
+    			line-height: 18px;
+			}
+		}
+
+		p {
+			margin: 0px;
+			color:$color-gray;
+			opacity: 0;
+		    -webkit-animation:fadeInUp .3s linear;
+		            animation:fadeInUp .3s linear;
+		    -webkit-animation-delay:3.6s;
+		            animation-delay:3.6s;
+		    -webkit-animation-fill-mode:forwards;
+		            animation-fill-mode:forwards;
+			
+			&:first-letter {
+				text-transform: capitalize;
+			}
+		}
+
+		.form {
+		    max-width: 550px;
+		    width: 90%;
+		    opacity: 0;
+		    -webkit-animation:fadeInUp .3s linear;
+		            animation:fadeInUp .3s linear;
+		    -webkit-animation-delay:3.6s;
+		            animation-delay:3.6s;
+		    -webkit-animation-fill-mode:forwards;
+		            animation-fill-mode:forwards;
+
+			&-input {
+				min-height:45px;
+				color:$color-gray;
+				border-bottom: 2px solid $color-gray;
+				width: 100%;
+				padding:5px 5px 5px 0px;
+			}
+		}
+	}
+}
